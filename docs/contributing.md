@@ -1,6 +1,6 @@
 # Contributing to the docs
 
-This folder contains the source for the [Hiero Enterprise Java technical documentation](https://openelements.github.io/hiero-enterprise-java/) (GitHub Pages).
+This folder contains the source for the [Hiero Enterprise Java technical documentation](https://hiero-ledger.github.io/hiero-enterprise-java/) (GitHub Pages).
 
 ## Structure
 
@@ -10,7 +10,6 @@ This folder contains the source for the [Hiero Enterprise Java technical documen
 - **`spring-boot.md`** — Spring Boot integration.
 - **`microprofile.md`** — MicroProfile integration.
 - **`managed-services.md`** — Base module and managed services.
-- **`adr/`** — Architecture Decision Records (ADRs) in Markdown.
 
 The site is built with [MkDocs](https://www.mkdocs.org/) and the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme. Configuration is in the repository root: `mkdocs.yml`.
 
