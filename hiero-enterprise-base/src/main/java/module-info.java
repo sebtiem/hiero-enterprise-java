@@ -1,23 +1,26 @@
-module com.openelements.hiero.base {
-  exports com.openelements.hiero.base;
-  exports com.openelements.hiero.base.protocol;
-  exports com.openelements.hiero.base.mirrornode;
-  exports com.openelements.hiero.base.verification;
-  exports com.openelements.hiero.base.data;
-  exports com.openelements.hiero.base.config;
-  exports com.openelements.hiero.base.implementation to
-      com.openelements.hiero.base.test;
-  exports com.openelements.hiero.base.implementation.data to
-      com.openelements.hiero.base.test;
-  exports com.openelements.hiero.base.config.implementation;
-  exports com.openelements.hiero.base.protocol.data;
-  exports com.openelements.hiero.base.interceptors to
-      com.openelements.hiero.base.test;
+import org.hiero.base.config.NetworkSettingsProvider;
+import org.hiero.base.config.hedera.HederaNetworkSettingsProvider;
 
-  uses com.openelements.hiero.base.config.NetworkSettingsProvider;
+module org.hiero.base {
+  exports org.hiero.base;
+  exports org.hiero.base.protocol;
+  exports org.hiero.base.mirrornode;
+  exports org.hiero.base.verification;
+  exports org.hiero.base.data;
+  exports org.hiero.base.config;
+  exports org.hiero.base.implementation to
+      org.hiero.base.test;
+  exports org.hiero.base.implementation.data to
+      org.hiero.base.test;
+  exports org.hiero.base.config.implementation;
+  exports org.hiero.base.protocol.data;
+  exports org.hiero.base.interceptors to
+      org.hiero.base.test;
 
-  provides com.openelements.hiero.base.config.NetworkSettingsProvider with
-      com.openelements.hiero.base.config.hedera.HederaNetworkSettingsProvider;
+  uses NetworkSettingsProvider;
+
+  provides NetworkSettingsProvider with
+      HederaNetworkSettingsProvider;
 
   requires transitive sdk; // Hedera SDK
   requires org.slf4j;
